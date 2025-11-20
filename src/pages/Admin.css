@@ -1,0 +1,1073 @@
+.admin-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  padding: 20px;
+}
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.login-title {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.admin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-tab {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.admin-tab:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.admin-tab.active {
+  color: #ffffff;
+  border-bottom-color: #667eea;
+}
+
+.unread-badge {
+  background: #dc3545;
+  color: white;
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-left: 8px;
+  min-width: 20px;
+  display: inline-block;
+  text-align: center;
+}
+
+.admin-header h1 {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.logout-button {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.logout-button:hover {
+  background: #c82333;
+}
+
+.admin-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.admin-form-section,
+.admin-projects-section {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+}
+
+.admin-form-section h2,
+.admin-projects-section h2 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.project-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 12px;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.submit-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  flex: 1;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.cancel-button {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.cancel-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.error-message {
+  background: rgba(220, 53, 69, 0.2);
+  border: 1px solid rgba(220, 53, 69, 0.5);
+  color: #ff6b7a;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.projects-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.projects-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.projects-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.projects-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.project-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+  transition: all 0.3s ease;
+}
+
+.project-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(5px);
+}
+
+.project-item-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.project-item-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.project-item-content h3 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.project-item-content p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.project-item-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.project-item-tags .tag {
+  background: rgba(102, 126, 234, 0.2);
+  color: #8ba4ff;
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  border: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+.project-item-link {
+  color: #8ba4ff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.project-item-link:hover {
+  text-decoration: underline;
+}
+
+.project-item-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.edit-button,
+.delete-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.edit-button {
+  background: rgba(102, 126, 234, 0.2);
+  color: #8ba4ff;
+  border: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+.edit-button:hover {
+  background: rgba(102, 126, 234, 0.3);
+}
+
+.delete-button {
+  background: rgba(220, 53, 69, 0.2);
+  color: #ff6b7a;
+  border: 1px solid rgba(220, 53, 69, 0.3);
+}
+
+.delete-button:hover {
+  background: rgba(220, 53, 69, 0.3);
+}
+
+.no-projects {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 40px 20px;
+  font-size: 1rem;
+}
+
+@media (max-width: 968px) {
+  .admin-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-item {
+    flex-direction: column;
+  }
+  
+  .project-item-image {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .project-item-actions {
+    flex-direction: row;
+  }
+}
+
+.admin-contacts-section {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  grid-column: 1 / -1;
+}
+
+.admin-contacts-section h2 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.contacts-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.contacts-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.contacts-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.contacts-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.contact-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.contact-item.unread {
+  background: rgba(102, 126, 234, 0.12);
+  border-color: rgba(102, 126, 234, 0.4);
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.2);
+}
+
+.contact-item.unread::before {
+  opacity: 1;
+}
+
+.status-badge {
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: default;
+  backdrop-filter: blur(10px);
+}
+
+.status-badge .badge-icon {
+  font-size: 0.9rem;
+  line-height: 1;
+  animation: icon-float 2s ease-in-out infinite;
+  display: inline-block;
+}
+
+.status-badge .badge-text {
+  position: relative;
+  z-index: 1;
+}
+
+.status-badge::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.4), transparent 70%);
+  transform: rotate(45deg);
+  animation: shine-sweep 4s infinite;
+  pointer-events: none;
+}
+
+.status-badge::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 25px;
+  padding: 2px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.status-badge:hover::after {
+  opacity: 1;
+}
+
+@keyframes shine-sweep {
+  0% {
+    left: -100%;
+    top: -100%;
+  }
+  100% {
+    left: 100%;
+    top: 100%;
+  }
+}
+
+@keyframes icon-float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-3px) scale(1.1);
+  }
+}
+
+.status-badge.status-new {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 8px 32px rgba(102, 126, 234, 0.5),
+    0 0 40px rgba(102, 126, 234, 0.3),
+    inset 0 2px 4px rgba(255, 255, 255, 0.4),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+  animation: pulse-new 3s ease-in-out infinite, glow-new 2s ease-in-out infinite;
+}
+
+@keyframes pulse-new {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 
+      0 8px 32px rgba(102, 126, 234, 0.5),
+      0 0 40px rgba(102, 126, 234, 0.3),
+      inset 0 2px 4px rgba(255, 255, 255, 0.4),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 
+      0 12px 40px rgba(102, 126, 234, 0.7),
+      0 0 60px rgba(102, 126, 234, 0.5),
+      inset 0 2px 4px rgba(255, 255, 255, 0.5),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes glow-new {
+  0%, 100% {
+    filter: brightness(1) drop-shadow(0 0 10px rgba(102, 126, 234, 0.5));
+  }
+  50% {
+    filter: brightness(1.2) drop-shadow(0 0 20px rgba(102, 126, 234, 0.8));
+  }
+}
+
+.status-badge.status-successful {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 50%, #56ab2f 100%);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 8px 32px rgba(17, 153, 142, 0.5),
+    0 0 40px rgba(56, 239, 125, 0.3),
+    inset 0 2px 4px rgba(255, 255, 255, 0.4),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.status-badge.status-successful::before {
+  animation: shine-sweep 3s infinite;
+}
+
+.status-badge.status-successful .badge-icon {
+  animation: check-bounce 0.6s ease-out;
+}
+
+@keyframes check-bounce {
+  0% {
+    transform: scale(0) rotate(-180deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(10deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.status-badge:hover {
+  transform: translateY(-3px) scale(1.05);
+  filter: brightness(1.1);
+}
+
+.status-badge.status-new:hover {
+  box-shadow: 
+    0 12px 48px rgba(102, 126, 234, 0.7),
+    0 0 60px rgba(102, 126, 234, 0.5),
+    inset 0 2px 6px rgba(255, 255, 255, 0.5),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.3);
+  animation: none;
+}
+
+.status-badge.status-successful:hover {
+  box-shadow: 
+    0 12px 48px rgba(17, 153, 142, 0.7),
+    0 0 60px rgba(56, 239, 125, 0.5),
+    inset 0 2px 6px rgba(255, 255, 255, 0.5),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.status-badge:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* Контейнер для статус-бейджа с анимацией перехода */
+.status-badge-container {
+  position: relative;
+  display: inline-flex;
+  min-width: 80px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Плавная анимация перехода между статусами */
+.status-badge {
+  position: absolute;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.status-badge.status-transition-in {
+  animation: badge-gentle-appear 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes badge-gentle-appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.85) translateY(-5px);
+    filter: blur(4px);
+  }
+  60% {
+    opacity: 0.9;
+    transform: scale(1.02) translateY(2px);
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* Плавная анимация исчезновения NEW бейджа */
+.status-badge.status-new.status-transition-out {
+  animation: badge-gentle-disappear 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes badge-gentle-disappear {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0) brightness(1);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  }
+  40% {
+    opacity: 0.7;
+    transform: scale(0.95) translateY(-3px);
+    filter: blur(2px) brightness(0.9);
+    background: linear-gradient(135deg, #667eea 30%, #764ba2 50%, #f093fb 70%);
+  }
+  70% {
+    opacity: 0.3;
+    transform: scale(0.85) translateY(-8px);
+    filter: blur(4px) brightness(0.7);
+    background: linear-gradient(135deg, #667eea 20%, #11998e 50%, #38ef7d 80%);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.7) translateY(-15px);
+    filter: blur(8px) brightness(0.5);
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 50%, #56ab2f 100%);
+  }
+}
+
+/* Плавная анимация появления SUCCESSFUL бейджа */
+.status-badge.status-successful.status-transition-in {
+  animation: badge-gentle-success-appear 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes badge-gentle-success-appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) translateY(15px);
+    filter: blur(8px) brightness(0.5);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #11998e 50%);
+  }
+  30% {
+    opacity: 0.3;
+    transform: scale(0.85) translateY(8px);
+    filter: blur(4px) brightness(0.7);
+    background: linear-gradient(135deg, #11998e 20%, #38ef7d 50%, #56ab2f 70%);
+  }
+  60% {
+    opacity: 0.7;
+    transform: scale(0.95) translateY(3px);
+    filter: blur(2px) brightness(0.9);
+    background: linear-gradient(135deg, #11998e 10%, #38ef7d 50%, #56ab2f 90%);
+  }
+  85% {
+    opacity: 0.95;
+    transform: scale(1.02) translateY(-2px);
+    filter: blur(1px) brightness(1.05);
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 50%, #56ab2f 100%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0) brightness(1);
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 50%, #56ab2f 100%);
+  }
+}
+
+/* Плавная анимация для иконки при переходе */
+.status-badge.status-successful.status-transition-in .badge-icon {
+  animation: check-mark-gentle-appear 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes check-mark-gentle-appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(5px);
+    filter: blur(4px);
+  }
+  40% {
+    opacity: 0.4;
+    transform: scale(0.6) translateY(2px);
+    filter: blur(2px);
+  }
+  60% {
+    opacity: 0.8;
+    transform: scale(0.9) translateY(-1px);
+    filter: blur(1px);
+  }
+  80% {
+    opacity: 0.95;
+    transform: scale(1.05) translateY(0px);
+    filter: blur(0.5px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+}
+
+.contact-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Плавная анимация удаления сообщения */
+.contact-item.deleting {
+  animation: contact-delete-animation 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+@keyframes contact-delete-animation {
+  0% {
+    opacity: 1;
+    transform: translateX(0) scale(1) translateY(0);
+    filter: blur(0) brightness(1);
+    max-height: 500px;
+    margin-bottom: 16px;
+    padding: 20px;
+  }
+  30% {
+    opacity: 0.8;
+    transform: translateX(20px) scale(0.98) translateY(-5px);
+    filter: blur(2px) brightness(0.9);
+    max-height: 500px;
+    margin-bottom: 16px;
+    padding: 20px;
+  }
+  60% {
+    opacity: 0.4;
+    transform: translateX(60px) scale(0.85) translateY(-10px);
+    filter: blur(4px) brightness(0.7);
+    max-height: 300px;
+    margin-bottom: 8px;
+    padding: 10px 20px;
+  }
+  90% {
+    opacity: 0.1;
+    transform: translateX(120px) scale(0.7) translateY(-20px);
+    filter: blur(8px) brightness(0.5);
+    max-height: 100px;
+    margin-bottom: 4px;
+    padding: 5px 20px;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(200px) scale(0.5) translateY(-30px);
+    filter: blur(12px) brightness(0.3);
+    max-height: 0;
+    margin-bottom: 0;
+    padding: 0 20px;
+  }
+}
+
+/* Дополнительный эффект для элементов внутри удаляемого сообщения */
+.contact-item.deleting .contact-item-header,
+.contact-item.deleting .contact-message {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.contact-item.deleting .status-badge {
+  opacity: 0.5;
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+}
+
+.contact-item.deleting .contact-item-actions {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.contact-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.contact-item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-item-info h3 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-item-info h3::before {
+  content: '👤';
+  font-size: 1.2rem;
+}
+
+.contact-email {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.contact-email::before {
+  content: '📧';
+  font-size: 0.9rem;
+}
+
+.contact-method {
+  color: rgba(102, 126, 234, 1);
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  background: rgba(102, 126, 234, 0.15);
+  padding: 4px 10px;
+  border-radius: 8px;
+  display: inline-flex;
+  width: fit-content;
+}
+
+.contact-method::before {
+  content: '💬';
+  font-size: 0.85rem;
+}
+
+.contact-date {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.contact-date::before {
+  content: '🕐';
+  font-size: 0.75rem;
+}
+
+.contact-message {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 16px;
+  border-left: 3px solid rgba(102, 126, 234, 0.5);
+  position: relative;
+}
+
+.contact-message::before {
+  content: '💭';
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: 1.2rem;
+  opacity: 0.5;
+}
+
+.contact-message p {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding-left: 32px;
+  position: relative;
+}
+
+.contact-item-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.mark-read-button {
+  background: rgba(40, 167, 69, 0.2);
+  color: #4ade80;
+  border: 1px solid rgba(40, 167, 69, 0.3);
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.mark-read-button:hover {
+  background: rgba(40, 167, 69, 0.3);
+}
+
+.no-contacts {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 40px 20px;
+  font-size: 1rem;
+}
+
+.admin-settings-section {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  grid-column: 1 / -1;
+}
+
+.admin-settings-section h2 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.settings-form {
+  max-width: 800px;
+}
+
+.settings-form textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.settings-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+  .admin-header {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  
+  .login-card {
+    padding: 30px 20px;
+  }
+
+  .admin-tabs {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .admin-tab {
+    width: 100%;
+    text-align: left;
+    border-bottom: none;
+    border-left: 2px solid transparent;
+  }
+
+  .admin-tab.active {
+    border-bottom: none;
+    border-left-color: #667eea;
+  }
+
+  .contact-item-header {
+    flex-direction: column;
+  }
+
+  .contact-item-actions {
+    width: 100%;
+  }
+
+  .mark-read-button,
+  .delete-button {
+    flex: 1;
+  }
+}
+
